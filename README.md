@@ -1,0 +1,1 @@
+Examples taken from 'Scala for the Impatient' by Cay S. Horstmann
