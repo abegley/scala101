@@ -33,9 +33,18 @@ object AuxiliaryConstructorsApp{
   }
 }
 
+//Primary Constructor Notes:
+// -- Parameters of the primary constructor turn into fields that are initialized with the construction parameters.
+// -- The parameters 'name' and 'age' become fields of the PrimaryConstructor class.
+// -- Primary constructor executes all statements in the class definition. See the println statement - it is part of the
+//    primary constructor.
+// -- No parameters after the class name; then the class has a primary constructor with no parameters. That constructor
+//    executes all statements in the body of the class.
+// -- Parameter without val or var, becomes a field, i.e.
+//      class Person(name: String, age: Int)    //declares and initializes immutable fields name and age that are
+//    object-private.  Equivalent of a private[this] val field.  See 5.4 Object private fields
+
 //The parameters of the primary constructor are placed immediately after the class name
-//Notes:  Parameters of the primary constructor turn into fields that are initialized with the construction parameters.
-//The parameters 'name' and 'age' become fields of the PrimaryConstructor class
 class PrimaryConstructor(val name: String, val age : Int){
   println("Just called primary constructor")
   def description = name + " is " + age + " years old"
