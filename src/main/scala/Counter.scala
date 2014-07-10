@@ -1,7 +1,7 @@
 package main.scala
 
 class Counter {
-  private var value=0  //must initialize the field
+  private var value=0  //var - must initialize the field
   private[this] var restrictedValue = 0; //Accessing someObject.value is not allowed
   def increment(){   //methods are public by default
     value+=15
