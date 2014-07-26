@@ -21,7 +21,7 @@ object CallingFunctionsMethods {
     println(BigInt.probablePrime(100, scala.util.Random))
     //Random is a singleton, In Java it is a common error to construct a new java.util.Random object for each random no.
 
-    prinln("Hello".distinct)  //no () distinct
+    println("Hello".distinct)  //no () distinct
   }
 
 }
