@@ -32,10 +32,13 @@ object ConditionalExpressions {
     //However, in Scala every expression is supposed to have some value.This is finessed by introducing a class Unit
     //that has one value, written as ().  The if statement without an else is equivalent to
     if(x > 0) 1 else ()
+    //above emits compiler warning
+    //Warning:(34, 15) a pure expression does nothing in statement position; you may be omitting necessary parentheses
+    //if(x > 0) 1 else ()
+    //^
+
     //Think of () as a placeholder for "no useful value", and think of Unit as the analog of void in Java or C++
     //void has no value, whereas Unit has one value that signifies "no value"
-
-
   }
 
 
