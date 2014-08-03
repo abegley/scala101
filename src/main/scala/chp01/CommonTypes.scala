@@ -14,7 +14,9 @@ object CommonTypes {
   def main(args:  Array[String]){
     //remember '1','10','6' is a class with methods, see RichInt and RichDouble - these augment the Int and Double java classes
     println(1.to(100))
+    println(1 to 100)
     println(1.*(5))
+    println(1 * 5)
     println(10./(5))
     println(6.%(4))
     println()

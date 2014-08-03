@@ -1,6 +1,6 @@
 package main.scala.chp02
 
-import scala.io.ReadStdin._
+import scala.io.Source._
 
 /*
 NOTES:
