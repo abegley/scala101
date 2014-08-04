@@ -5,7 +5,7 @@ import scala.math._
 /**
  * Created by abegley on 04/08/2014.
  */
-object FunctionsWithFunctionsParameters {
+object FunctionsWithFunctionParameters {
   def main(args: Array[String]){
     //implement a function that takes another function as a parameter.
 
