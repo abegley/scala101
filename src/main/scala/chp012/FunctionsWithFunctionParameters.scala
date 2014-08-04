@@ -27,6 +27,22 @@ object FunctionsWithFunctionParameters {
     //((Double) => Double) => Double
 
     //Since valueAtOneQuarter is a function that receives a function, it is called a higher-order function
+
+    //A higher-order function can also produce a function.  Here is a simple example:
+
+    def multiply(factor:Double)=(x:Double) => factor * x
+    //multiply returns the function (x:Double) => 3 * x
+    println(multiply(3))
+    //The power of multiply is that it can deliver functions that multiply by any amount
+
+    val quintuple = multiply(5)
+    println(quintuple.apply(20))
+
+    //The multiply function has a parameter of type Double, and it returns a function of type
+    //(Double) => Double.  Therefore its type is
+
+    //(Double) => ((Double) => Double
+
   }
 
 }
