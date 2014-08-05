@@ -17,6 +17,8 @@ object AnonymousFunctions {
 
     //You don't have to name the function.  You can just pass it to another function
     println(Array(3.14, 1.42, 2.0).map((x: Double) => x * 3).deep.mkString("\n"))
+    println("Calling function as a variable")
+    println(Array(3.14, 1.42, 2.0).map(triple).deep.mkString("\n"))
   }
 
 }

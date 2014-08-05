@@ -10,6 +10,10 @@ object FunctionsWithFunctionParameters {
     //implement a function that takes another function as a parameter.
 
     def valueAtOneQuarter(f: (Double) => Double) = f(0.25)
+
+    println("ceil amount:")
+    println(valueAtOneQuarter(ceil _))
+
     //not that the parameter can be any function receiving and returning a Double
 
     //For example
