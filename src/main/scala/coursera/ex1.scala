@@ -55,5 +55,9 @@ object ex1 extends App {
 
   //Class Hierarchies
 
+  //Apply method
+  //Scala has special "apply" syntax: if you write a symbol name followed by an argument list in parentheses (or just a pair of
+  //parentheses for an empty argument list), Scala converts that into a call to the apply method for the named object.
+
 
 }
