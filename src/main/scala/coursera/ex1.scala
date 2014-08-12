@@ -58,6 +58,7 @@ object ex1 extends App {
   //Apply method
   //Scala has special "apply" syntax: if you write a symbol name followed by an argument list in parentheses (or just a pair of
   //parentheses for an empty argument list), Scala converts that into a call to the apply method for the named object.
-
+  //Scala converts that into a call to the apply method for the named object. When we create a variable whose value is a
+  //function object and we then reference that variable followed by parentheses, that gets converted into a call to the apply method of the function object.
 
 }
