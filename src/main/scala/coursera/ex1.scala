@@ -5,7 +5,7 @@ object ex1 extends App {
     //Higher Order functions
     //These are functions that take a function as a parameter or return functions
 
-  //sum() returns a function that takes two integers and returns an integer
+  //// sum() returns a function that takes two integers and returns an integer
   def sum(f: Int => Int): (Int, Int ) => Int ={
     def sumf(a: Int, b:Int): Int ={ a + b}
     sumf
