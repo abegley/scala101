@@ -3,20 +3,24 @@ package instilSOC
 
 object ex4 extends App {
 
-  val y : Any = "Something bar"           //> y  : Any = something bar
+  val stringLiteral : Any = "match - a better switch"           //> y  : Any = something bar
   // Scala has a built-in general pattern matching mechanism.
   // It allows to match on any sort of data with a first-match policy.
-  y match {
-    case s: String if(s.contains("bar")) => s.length
-    case "something" => "ffo"
+  val result = stringLiteral match {
+    case s: String if(s.contains("match")) => s.length
+    case "match" => "ffo"
     case i: Int => i
     case _ => "default case"
-  }                             //> res0: Any = 13
+  }
+
+  println(result)  //s.length = 23
+
 
   // Most useful with Case Classes
   case class Calculator(make: String, model: String)
   val hp20b = Calculator("hp", "20B")               //> hp20b  : ex4.Calculator = Calculator(hp,20B)
-  val hp30b = Calculator("hp", "30b")               //> hp30b  : ex4.Calculator = Calculator(hp,30B)
+  val hp30b = Calculator("hp", "30B")               //> hp30b  : ex4.Calculator = Calculator(hp,30B)
+  val hpX = Calculator("hp", "X")
 
   def calcType(calc: Calculator) = calc match {
     case Calculator("hp", "20B") => "financial"
@@ -27,6 +31,7 @@ object ex4 extends App {
 
   println(calcType(hp20b))                                   //> res1: String = financial
   println(calcType(hp30b))                                   //> res2: String = business
+  println(calcType(hpX))
 
   // If the type defines an extractor (unapply) can do more sophisticated matching
   def x(l:List[_]) = l match {
