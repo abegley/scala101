@@ -12,6 +12,7 @@ object ReadingLines extends App {
     //the default platform encoding
  // val lineIterator = nasdaq100.getLines()
  // for(line <- lineIterator) println(line)
+ // nasdaq100.close()
 
   //Or you can put the lines into an array or array buffer by applying
   //the toArray or toBuffer method to the iterator
@@ -19,4 +20,7 @@ object ReadingLines extends App {
   println("From array")
   val lines = nasdaq100.getLines.toArray
   lines.map(println(_))
+  nasdaq100.close()
+
+
 }
