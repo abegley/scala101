@@ -76,6 +76,43 @@ object FunctionsAsVariables extends App {
   val list1 = List.range(1,10)
   list1.filter(modMethod1).foreach(println(_))
 
+  //As noted, this is similar to the process of defining a function literal and assigning it to a variable.
+  //The following function works just like the previous method:
+  val modFunction = (i:Int) => i % 2 == 0
+  list.filter(modFunction)
+
+  //At a coding level, the obvious difference is that modMethod is a method defined in a class, whereas modFunction
+  //is a function that's assigned to a variable.  Under the covers, modFunction is an instance of the Function1
+  //triat, which defines a function that takes one argument.  (The scala package defines other similiar traits,
+  //including Function0, Function2, and so on, up to Function22.)
+
+  //Assigning an existing function/method to a function variable
+  val c1 = scala.math.cos _
+  val c2 = scala.math.cos(_)  //same as above? Need to confirm
+
+  //This is called a partially applied function.  It's partially applied because the cos method requires one argument,
+  //which you have not yet supplied
+  //Now that you have c(1,2), you can use it just like you would have used cos:
+  c1(0)   //res0:  Double = 1.0
+
+  //The following example shows how to use this same technique on the scala.math.pow method, which takes two parameters:
+  val p = scala.math.pow(_,_)
+  p(scala.math.E, 2)    //res0: Double = 7.389056098930
+
+
+  //####Summary notes#####
+  //Think of the => symbol as a transformer.  It transforms the input data on its left side to some new output data,
+  //using the algorithm on its right side.
+
+  //Use def to define a method, use val to define a function
+
+  //When assigning a function to a variable, a function literal (anonymous function) is the code on the right side of the
+  //expression.
+
+  //A funtion value is an object, and extends the FunctionalN traits in the main scala package such as Functon0 for
+  //a function that takes no parameters.
+
+
 
 
 }
